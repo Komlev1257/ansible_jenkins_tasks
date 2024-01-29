@@ -1,0 +1,47 @@
+---
+- name: install Jenkins
+  hosts: VM1
+  become: yes
+  become_user: root
+  tasks:
+
+  - name: update yum
+    yum:
+     name: '*'
+     state: latest
+
+  - name: add repo
+    get_url:
+     url: https://pkg.jenkins.io/redhat-stable/jenkins.repo 
+     dest: /etc/yum.repos.d/jenkins.repo
+
+  - name: import key file
+    ansible.builtin.rpm_key:
+     state: present
+     key: https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+  - name: update yum
+    yum:
+     name: '*'
+     state: latest
+
+  - name: install java
+    yum:
+     name: java-11-openjdk-devel
+     state: latest
+
+  - name: add path
+    community.general.alternatives:
+     name: java
+     path: /usr/lib/jvm/java-11-openjdk-11.0.22.0.7-1.el7_9.x86_64/bin/java
+
+  - name: install jenkins
+    yum:
+     name: jenkins
+     state: latest
+
+  - name: start jenkins
+    ansible.builtin.systemd:
+     enabled: yes
+     name: jenkins
+     state: started

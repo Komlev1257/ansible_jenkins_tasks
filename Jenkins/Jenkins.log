@@ -1,0 +1,159 @@
+Started by user Komlev Artem Vladimirovich
+Running as SYSTEM
+Собирается удаленно на VM2 (CentOS) in workspace /var/lib/Jenkins/workspace/work_task
+[work_task] $ /bin/sh -xe /tmp/jenkins13705531373444570049.sh
++ sudo yum -y install epel-release
+Загружены модули: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: centos-mirror.rbc.ru
+ * epel: mirrors.uni-ruse.bg
+ * extras: centos-mirror.rbc.ru
+ * updates: centos-mirror.rbc.ru
+Пакет epel-release-7-14.noarch уже установлен, и это последняя версия.
+Выполнять нечего
++ sudo yum update
+Загружены модули: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: centos-mirror.rbc.ru
+ * epel: fedora-mirror02.rbc.ru
+ * extras: centos-mirror.rbc.ru
+ * updates: centos-mirror.rbc.ru
+No packages marked for update
++ sudo yum -y install htop
+Загружены модули: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: centos-mirror.rbc.ru
+ * epel: mirror.efect.ro
+ * extras: centos-mirror.rbc.ru
+ * updates: centos-mirror.rbc.ru
+Разрешение зависимостей
+There are unfinished transactions remaining. You might consider running yum-complete-transaction, or "yum-complete-transaction --cleanup-only" and "yum history redo last", first to finish them. If those don't work you'll have to try removing/installing packages by hand (maybe package-cleanup can help).
+--> Проверка сценария
+---> Пакет htop.x86_64 0:2.2.0-3.el7 помечен для установки
+--> Проверка зависимостей окончена
+
+Зависимости определены
+
+================================================================================
+ Package         Архитектура       Версия                 Репозиторий     Размер
+================================================================================
+Установка:
+ htop            x86_64            2.2.0-3.el7            epel            103 k
+
+Итого за операцию
+================================================================================
+Установить  1 пакет
+
+Объем загрузки: 103 k
+Объем изменений: 218 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Установка   : htop-2.2.0-3.el7.x86_64                                     1/1 
+  Проверка    : htop-2.2.0-3.el7.x86_64                                     1/1 
+
+Установлено:
+  htop.x86_64 0:2.2.0-3.el7                                                     
+
+Выполнено!
+[work_task] $ /bin/sh -xe /tmp/jenkins8618486203302765871.sh
++ sudo yum install -y tmux
+Загружены модули: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: centos-mirror.rbc.ru
+ * epel: mirror.efect.ro
+ * extras: centos-mirror.rbc.ru
+ * updates: centos-mirror.rbc.ru
+Разрешение зависимостей
+There are unfinished transactions remaining. You might consider running yum-complete-transaction, or "yum-complete-transaction --cleanup-only" and "yum history redo last", first to finish them. If those don't work you'll have to try removing/installing packages by hand (maybe package-cleanup can help).
+--> Проверка сценария
+---> Пакет tmux.x86_64 0:1.8-4.el7 помечен для установки
+--> Проверка зависимостей окончена
+
+Зависимости определены
+
+================================================================================
+ Package         Архитектура       Версия                 Репозиторий     Размер
+================================================================================
+Установка:
+ tmux            x86_64            1.8-4.el7              base            243 k
+
+Итого за операцию
+================================================================================
+Установить  1 пакет
+
+Объем загрузки: 243 k
+Объем изменений: 558 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Установка   : tmux-1.8-4.el7.x86_64                                       1/1 
+  Проверка    : tmux-1.8-4.el7.x86_64                                       1/1 
+
+Установлено:
+  tmux.x86_64 0:1.8-4.el7                                                       
+
+Выполнено!
+[work_task] $ /bin/sh -xe /tmp/jenkins2051160756792070494.sh
++ sudo yum install jq -y
+Загружены модули: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: centos-mirror.rbc.ru
+ * epel: ftp.nluug.nl
+ * extras: centos-mirror.rbc.ru
+ * updates: centos-mirror.rbc.ru
+Разрешение зависимостей
+There are unfinished transactions remaining. You might consider running yum-complete-transaction, or "yum-complete-transaction --cleanup-only" and "yum history redo last", first to finish them. If those don't work you'll have to try removing/installing packages by hand (maybe package-cleanup can help).
+--> Проверка сценария
+---> Пакет jq.x86_64 0:1.6-2.el7 помечен для установки
+--> Обработка зависимостей: libonig.so.5()(64bit) пакета: jq-1.6-2.el7.x86_64
+--> Проверка сценария
+---> Пакет oniguruma.x86_64 0:6.8.2-2.el7 помечен для установки
+--> Проверка зависимостей окончена
+
+Зависимости определены
+
+================================================================================
+ Package            Архитектура     Версия                  Репозиторий   Размер
+================================================================================
+Установка:
+ jq                 x86_64          1.6-2.el7               epel          167 k
+Установка зависимостей:
+ oniguruma          x86_64          6.8.2-2.el7             epel          181 k
+
+Итого за операцию
+================================================================================
+Установить  1 пакет (+1 зависимый)
+
+Объем загрузки: 348 k
+Объем изменений: 1.0 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Общий размер                                       216 kB/s | 348 kB  00:01     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Установка   : oniguruma-6.8.2-2.el7.x86_64                                1/2 
+  Установка   : jq-1.6-2.el7.x86_64                                         2/2 
+  Проверка    : oniguruma-6.8.2-2.el7.x86_64                                1/2 
+  Проверка    : jq-1.6-2.el7.x86_64                                         2/2 
+
+Установлено:
+  jq.x86_64 0:1.6-2.el7                                                         
+
+Установлены зависимости:
+  oniguruma.x86_64 0:6.8.2-2.el7                                                
+
+Выполнено!
+[work_task] $ /bin/sh -xe /tmp/jenkins14488352190017181848.sh
++ sudo echo 'PermitRootLogin no'
++ sudo echo 'PasswordAuthentication no'
++ sudo echo 'PubkeyAuthentication yes'
++ sudo service sshd restart
+Redirecting to /bin/systemctl restart sshd.service
+Finished: SUCCESS
